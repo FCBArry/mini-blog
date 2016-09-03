@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 设置开发模式为false -->
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+		name="myRequestParser" class="goods.intercept.background.RequestParseWrapper"
+		scope="default" optional="true" />
+	<constant name="struts.multipart.parser" value="myRequestParser" />
+
+	<package name="/" extends="struts-default" namespace="/">
+
+		<!-- 配置首页访问的Action -->
+		<action name="/" class="">
+			<result name="/">/index.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
