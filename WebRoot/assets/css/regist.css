@@ -1,0 +1,35 @@
+body{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: 495A80;
+}
+
+.form-signin{
+	max-width: 330px;
+	padding-top: 80px;
+	margin: 0 auto;
+}
+
+.input-group{
+	margin-bottom: 20px;
+}
+
+.form-signin-heading{
+	margin-bottom: 20px;
+}
+
+.container img{
+	float: left;
+	height: 60px;
+}
+
+.header {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
