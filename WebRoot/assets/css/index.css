@@ -1,0 +1,29 @@
+.header{
+	background-image: url(http://static.ghostchina.com/image/6/d1/fcb3879e14429d75833a461572e64.jpg);
+	text-align: center;
+	color: black;
+}
+
+.main-navigation {
+  padding: 0;
+}
+
+#example-navbar-collapse{
+	width: 350px;
+	margin:0 auto;
+}
+
+.icon {
+	float: right !important;
+}
+
+.icon img {
+	float: left;
+	padding: 0;
+	height: 30px;
+	margin-top: 10px;
+}
+
+.icon a{
+	float: left;
+}
