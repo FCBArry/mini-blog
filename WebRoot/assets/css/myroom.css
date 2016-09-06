@@ -1,0 +1,40 @@
+body{
+	background-image: url("../img/myroom.jpg");
+}
+
+.container{
+	width: 70%;
+}
+
+.header{
+	background-image: url(../img/room_header.jpg);
+	text-align: center;
+	color: #ffffff;
+}
+
+.header img{
+	height: 50px;
+}
+
+.content:hover {
+	//margin-bottom: 10px;
+	background: #ebebff;
+	cursor: pointer;
+}
+
+.content{
+	background-color: #ebebeb;
+}
+
+.page{
+	text-align: center;
+}
+
+.nav-tabs{
+	width: 180px;
+	margin:0 auto;
+}
+
+.mynav{
+	text-align: center;
+}

@@ -1,0 +1,117 @@
+<!--
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <!--
+    <base href="<%=basePath%>">
+    -->
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <title>miniblog-myroom</title>
+  	<meta http-equiv="pragma" content="no-cache">
+  	<meta http-equiv="cache-control" content="no-cache">
+  	<meta http-equiv="expires" content="0">    
+  	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+  	<meta http-equiv="description" content="This is my page">
+  	<!--
+  	<link rel="stylesheet" type="text/css" href="styles.css">
+  	-->
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="assets/css/myroom.css">
+
+  </head>
+  
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <div><h3 class="lead">用户名</h3></div>
+        <div><img class="img-circle" src="assets/img/icon.png"/></div>
+        <div><h3 class="lead">关注28|粉丝999</h3></div>
+        <div><h3 class="lead">座右铭</h3></div>
+        <div class="mynav">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="#">我的博客</a></li>
+            <li role="presentation"><a href="#">我的收藏</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content col-xs-12">
+            <div class="row">
+                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
+                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
+                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
+                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
+            </div>
+      </div>
+      <div class="content col-xs-12">
+            <div class="row">
+                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
+                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
+                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
+                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
+            </div>
+      </div>
+      <div class="content col-xs-12">
+            <div class="row">
+                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
+                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
+                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
+                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
+            </div>
+      </div>
+      <div class="content col-xs-12">
+            <div class="row">
+                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
+                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
+                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
+                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
+            </div>
+      </div>
+
+      <div class="page">
+            <nav>
+              <ul class="pagination pagination-lg">
+              <li class="disabled"><a href="#">&laquo;</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a>
+              </ul>
+            </nav>
+      </div>
+
+    </div>
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  	<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

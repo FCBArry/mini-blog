@@ -1,15 +1,19 @@
+body{
+	background-color: #ebebeb;
+}
+
 .header{
-	background-image: url(http://static.ghostchina.com/image/6/d1/fcb3879e14429d75833a461572e64.jpg);
+	background-image: url(../img/lun.jpg);
 	text-align: center;
 	color: black;
 }
 
 .main-navigation {
-  padding: 0;
+	padding: 0;
 }
 
 #example-navbar-collapse{
-	width: 350px;
+	width: 400px;
 	margin:0 auto;
 }
 
@@ -26,4 +30,50 @@
 
 .icon a{
 	float: left;
+}
+
+.right-1,
+.right-2,
+.right-3{
+	margin-bottom: 30px;
+	background-color: #ffffff;
+}
+
+.list-group,
+.table{
+	margin-bottom :0px;
+}
+
+.left{
+	margin-right: 30px;
+}
+
+.page-header,
+.content{
+	background-color: #ffffff;
+}
+
+.page-header{
+	margin-top: 0;
+	text-align: center;
+}
+
+.foot{
+	color: white;
+	text-align: center;
+}
+
+.page{
+	text-align: center;
+}
+
+.dropdown-menu li,
+.dropdown-menu li a{
+	width: 100%;
+}
+
+.content:hover {
+	//margin-bottom: 10px;
+	background: #ebebff;
+	cursor: pointer;
 }
