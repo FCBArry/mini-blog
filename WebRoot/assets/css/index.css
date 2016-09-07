@@ -59,8 +59,12 @@ body{
 }
 
 .foot{
-	color: white;
+	color: #C0C0C0;
 	text-align: center;
+}
+
+.foot a{
+	color: #C0C0C0;
 }
 
 .page{
@@ -74,6 +78,6 @@ body{
 
 .content:hover {
 	//margin-bottom: 10px;
-	background: #ebebff;
+	background: #C0C0C0;
 	cursor: pointer;
 }

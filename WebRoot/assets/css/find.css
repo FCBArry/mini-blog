@@ -1,0 +1,43 @@
+body{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #495A80;
+}
+
+.container{
+	width: 80%;
+}
+
+.form-group{
+	padding: 0;
+}
+
+img{
+	height: 50px;
+}
+
+.content_in{
+	text-align: center;
+}
+
+.content_in div:hover{
+	background: #C0C0C0;
+	cursor: pointer;
+}
+
+.content_in p{
+	margin-bottom: 0px;
+}
+
+.pagediv{
+	text-align: center;
+}
+
+.foot{
+	color: #C0C0C0;
+	text-align: center;
+}
+
+.foot a{
+	color: #C0C0C0;
+}

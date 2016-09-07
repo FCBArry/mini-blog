@@ -1,0 +1,193 @@
+<!--
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <!--
+    <base href="<%=basePath%>">
+    -->
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <title>miniblog-find</title>
+  	<meta http-equiv="pragma" content="no-cache">
+  	<meta http-equiv="cache-control" content="no-cache">
+  	<meta http-equiv="expires" content="0">    
+  	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+  	<meta http-equiv="description" content="This is my page">
+  	<!--
+  	<link rel="stylesheet" type="text/css" href="styles.css">
+  	-->
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="assets/css/find.css">
+
+  </head>
+  
+  <body>
+
+    <div class="container">
+
+      <div class="header">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">MINIBLOG</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="friend.html">我的关注</a></li>
+                <li class="active"><a href="#">添加朋友</a></li>
+                <li><a href="myroom.html">我的空间</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+        </nav>
+      </div>
+
+      <div class="find">
+        <form role="form" class="row">
+
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-4">
+             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="用户名">
+            </div>
+            <div class="col-xs-4">
+             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="邮箱">
+            </div>
+          </div>
+
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-2">
+              <select class="form-control"> 
+                  <option>男</option> 
+                  <option>女</option> 
+              </select> 
+            </div>
+            <div class="col-xs-2">
+              <select class="form-control"> 
+                  <option>17</option> 
+                  <option>18</option> 
+                  <option>19</option>
+              </select> 
+            </div>
+            <div class="col-xs-2">
+              <select class="form-control"> 
+                  <option>学生</option> 
+                  <option>老师</option> 
+                  <option>主播</option>
+              </select> 
+            </div>
+            <div class="col-xs-2">
+              <select class="form-control"> 
+                  <option>安徽</option> 
+                  <option>北京</option>  
+              </select> 
+            </div>
+            <div class="col-xs-2">
+              <button type="submit" class="btn btn-success">查找全部朋友</button> 
+            </div>
+            <div class="col-xs-2">
+              <button type="submit" class="btn btn-success">查找我的好友</button> 
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="content">
+        <div class="page-header">
+          <h1>已找到朋友 <small>不感兴趣？重新输入条件</small></h1>
+        </div>
+        <div class="row content_in">
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="img-circle" src="assets/img/icon.png"/>
+                  <p class="lead">用户名</p>
+                </div>
+              </div>
+      </div>
+
+      <div class="pagediv">
+        <div class="page">
+              <nav>
+                <ul class="pagination pagination">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+                </ul>
+              </nav>
+        </div>
+      </div>
+
+      <div class="foot">
+         <div>
+            <p>author <a href="https://github.com/CugLu">@CugLu</a></p>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  	<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

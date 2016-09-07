@@ -1,5 +1,7 @@
-body{
+﻿body{
 	background-image: url("../img/myroom.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .container{
@@ -9,7 +11,7 @@ body{
 .header{
 	background-image: url(../img/room_header.jpg);
 	text-align: center;
-	color: #ffffff;
+	color: #C0C0C0;
 }
 
 .header img{
@@ -18,7 +20,7 @@ body{
 
 .content:hover {
 	//margin-bottom: 10px;
-	background: #ebebff;
+	background: #C0C0C0;
 	cursor: pointer;
 }
 
@@ -37,4 +39,25 @@ body{
 
 .mynav{
 	text-align: center;
+}
+
+.foot{
+	color: #C0C0C0;
+	text-align: center;
+}
+
+.foot a{
+	color: #C0C0C0;
+}
+
+.nav-tabs li{
+	padding: 0px;
+}
+
+.nav-tabs a{
+	color: #C0C0C0;
+}
+
+.nav-tabs:hover a{
+	color: #333;
 }

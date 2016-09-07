@@ -39,9 +39,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div><h3 class="lead">关注28|粉丝999</h3></div>
         <div><h3 class="lead">座右铭</h3></div>
         <div class="mynav">
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation"><a href="#">我的博客</a></li>
-            <li role="presentation"><a href="#">我的收藏</a></li>
+          <ul class="nav nav-tabs row-fluid" role="tablist">
+            <li class="col-xs-6" role="presentation"><a href="#">我的博客</a></li>
+            <li class="col-xs-6" role="presentation"><a href="#">我的收藏</a></li>
           </ul>
         </div>
       </div>
@@ -94,6 +94,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
             </div>
       </div>
+	   <div class="content col-xs-12">
+            <div class="row">
+                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
+                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
+                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
+                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
+            </div>
+      </div>
 
       <div class="page">
             <nav>
@@ -104,11 +116,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <li><a href="#">3</a></li>
               <li><a href="#">4</a></li>
               <li><a href="#">5</a></li>
-              <li><a href="#">&raquo;</a>
+              <li><a href="#">&raquo;</a></li>
               </ul>
             </nav>
       </div>
-
+	  
+	  <div class="foot">
+		<div>
+			<p>author <a href="https://github.com/CugLu">@CugLu</a></p>
+			<p class="pull-right"><a href="#">Back to top</a></p>
+		</div>
+	  </div>
+	  
     </div>
 
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
