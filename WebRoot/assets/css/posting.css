@@ -17,27 +17,6 @@
 	margin: 0px;
 }
 
-.media-left img{
-	height: 60px;
-}
-
-.media-body img{
-	max-height: 200px;
-}
-
-.commentrow{
-	padding-bottom: 10px;
-	padding-top: 10px;
-	border-bottom:1px solid white;
-}
-
-.content,
-.header{
-	border-left:1px solid white;
-	border-right:1px solid white;
-}
-
-.page,
 .post,
 .foot{
 	padding: 0px;
@@ -50,8 +29,4 @@
 
 .foot a{
 	color: black;
-}
-
-.post{
-	border:1px solid white;
 }
