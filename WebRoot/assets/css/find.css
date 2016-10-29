@@ -1,7 +1,7 @@
 body{
-	padding-top: 40px;
-	padding-bottom: 40px;
-	background-color: #495A80;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #C0C0C0;
 }
 
 .container{
@@ -9,7 +9,7 @@ body{
 }
 
 .form-group{
-	padding: 0;
+	//padding: 0;
 }
 
 img{
@@ -21,7 +21,7 @@ img{
 }
 
 .content_in div:hover{
-	background: #C0C0C0;
+	background: white;
 	cursor: pointer;
 }
 
@@ -29,15 +29,15 @@ img{
 	margin-bottom: 0px;
 }
 
-.pagediv{
+.page{
 	text-align: center;
 }
 
 .foot{
-	color: #C0C0C0;
+	color: black;
 	text-align: center;
 }
 
 .foot a{
-	color: #C0C0C0;
+	color: black;
 }

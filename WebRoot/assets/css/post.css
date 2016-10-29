@@ -2,12 +2,25 @@
 	background-color:#C0C0C0;
 }
 
-.container{
-	width: 70%;
+.up{
+	width: 80%;
 	
 }
 
-.headerimg{
+.middle{
+	width:80%;
+}
+
+.middle{
+	border-left:1px solid white;
+	border-right:1px solid white;
+}
+
+.down{
+	width:80%;
+}
+
+.header{
 	background-image: url(../img/lun.jpg);
 	text-align: center;
 	color: black;
@@ -31,16 +44,12 @@
 	border-bottom:1px solid white;
 }
 
-.content,
-.header{
-	border-left:1px solid white;
-	border-right:1px solid white;
+.page{
+	text-align: center;
 }
 
-.page,
-.post,
-.foot{
-	padding: 0px;
+.page{
+	//padding: 0px;
 }
 
 .foot{

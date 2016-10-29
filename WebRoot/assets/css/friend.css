@@ -1,13 +1,10 @@
 ﻿body{
-	background-image: url("../img/myroom.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-color: #C0C0C0;
 }
 
 .container{
-	width: 80%;
+	width: 70%;
 	padding: 0px;
-	background-color: #337ab7;
 }
 
 img{
@@ -19,19 +16,31 @@ img{
 }
 
 .foot{
-	color: #C0C0C0;
+	color: black;
 	text-align: center;
 }
 
 .foot a{
-	color: #C0C0C0;
+	color: black;
 }
 
-.col-xs-2:hover{
+.col-md-2:hover,
+.col-sm-3:hover,
+.col-xs-6:hover{
 	background: #C0C0C0;
 	cursor: pointer;
 }
 
-.col-xs-2 p{
+.col-md-2 p,
+.col-sm-3 p,
+.col-xs-6 p{
+	margin-bottom: 0px;
+}
+
+.mycons{
+	padding-top: 20px;
+}
+
+.panel-info{
 	margin-bottom: 0px;
 }

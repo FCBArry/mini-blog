@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mini.info.domain.Info" table="m_info">
+		
+		<id name="iid">
+			<generator class="assigned"/>
+		</id>
+		<property name="iname"/>
+		<property name="iaddress"/>
+		<property name="isex"/>
+		<property name="iemotion"/>
+		<property name="iblog"/>
+		<property name="ime"/>
+		<property name="iqq"/>
+		<property name="iemail"/>
+		<property name="iphone"/>
+		<property name="icompany"/>
+		<property name="icomaddress"/>
+		<property name="ijob"/>
+		<property name="ischool"/>
+		<property name="ischaddress"/>
+		<property name="idegree"/>
+		
+		<many-to-one name="user" unique="true" column="uid" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -27,109 +27,253 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
   	<link rel="stylesheet" href="assets/css/myroom.css">
-
+	<script type="text/javascript">
+		$(function () { $('#collapseTwo').collapse('show')});
+	</script>
   </head>
   
   <body>
-
-    <div class="container">
-      <div class="header">
-        <div><h3 class="lead">用户名</h3></div>
-        <div><img class="img-circle" src="assets/img/icon.png"/></div>
-        <div><h3 class="lead">关注28|粉丝999</h3></div>
-        <div><h3 class="lead">座右铭</h3></div>
-        <div class="mynav">
-          <ul class="nav nav-tabs row-fluid" role="tablist">
-            <li class="col-xs-6" role="presentation"><a href="#">我的博客</a></li>
-            <li class="col-xs-6" role="presentation"><a href="#">我的收藏</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="content col-xs-12">
-            <div class="row">
-                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
-                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
-                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
-                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
-            </div>
-      </div>
-      <div class="content col-xs-12">
-            <div class="row">
-                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
-                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
-                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
-                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
-            </div>
-      </div>
-      <div class="content col-xs-12">
-            <div class="row">
-                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
-                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
-                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
-                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
-            </div>
-      </div>
-      <div class="content col-xs-12">
-            <div class="row">
-                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
-                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
-                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
-                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
-            </div>
-      </div>
-	   <div class="content col-xs-12">
-            <div class="row">
-                <div class="col-xs-2"><h3><span class="label label-info">999+</span></h3></div>
-                <div class="col-xs-6"><a href=""><h1 class="lead">博客标题</h1></a></div>
-                <div class="col-xs-2"><h3 class="lead"><span class="glyphicon glyphicon-user"><a>蔡路</a></span></h3></div>
-                <div class="col-xs-2"><h3><span class="label label-success">07-28</span></h3></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-6"><p>内容截取内容截取内容截取内容截取</p></div>
-            </div>
-      </div>
-
-      <div class="page">
-            <nav>
-              <ul class="pagination pagination-lg">
-              <li class="disabled"><a href="#">&laquo;</a></li>
-              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">&raquo;</a></li>
-              </ul>
-            </nav>
-      </div>
-	  
-	  <div class="foot">
-		<div>
-			<p>author <a href="https://github.com/CugLu">@CugLu</a></p>
-			<p class="pull-right"><a href="#">Back to top</a></p>
+	
+	<div class="container">
+		
+		<div class="header row">
+			<h3 class="lead">用户名</h3>
+			<img class="img-circle" src="assets/img/icon.png"/>
+			<h3 class="lead headerbottom">开黑吗？我玩虚空掠夺者卡兹克</h3>
 		</div>
-	  </div>
-	  
-    </div>
-
+		
+		<div class="mynav row">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#example-navbar-collapse">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-tower"></span>MINIBLOG</a>
+				</div>
+				<div class="collapse navbar-collapse" id="example-navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#"><span class="glyphicon glyphicon-book"></span> 博客</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-heart"></span> 收藏</a></li>
+					</ul>
+				</div>
+			</nav>
+        </div>
+		
+		<div class="row main">
+			<div class="col-sm-3 left">
+		
+				<div class="list-group">
+					<li class="list-group-item list-group-item-success">关注<span class="badge">9</span></li>
+					<li class="list-group-item list-group-item-info">粉丝<span class="badge">999+</span></li>
+					<li class="list-group-item list-group-item-warning">博客<span class="badge">9999+</span></li>
+				</div>
+				
+				<div class="info">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									基本信息
+								</h4>
+							</div>
+							<div class="panel-body table-responsive">
+								<table class="table table-condensed table-striped">
+								  <tbody>
+									<tr>
+									  <td><span class="glyphicon glyphicon-user"></span></td>
+									  <td>蔡路</td>
+									</tr>
+									<tr>
+									  <td><span class="glyphicon glyphicon-map-marker"></span></td>
+									  <td>湖北武汉</td>
+									</tr>
+									<tr>
+									  <td><span class="glyphicon glyphicon-eye-open"></span></td>
+									  <td>男</td>
+									</tr>
+									<tr>
+									  <td><span class="glyphicon glyphicon-heart"></span></td>
+									  <td>单身狗</td>
+									</tr>
+									<tr>
+									  <td><span class="glyphicon glyphicon-send"></span></td>
+									  <td>巴塞罗那主席</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+						</div>
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" 
+									   href="#collapseTwo">
+										更多信息
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body table-responsive">
+									<table class="table table-condensed table-striped">
+									  <tbody>
+										<tr>
+										  <td><span class="glyphicon glyphicon-paperclip"></span></td>
+										  <td>https://github.com/CugLu</td>
+										</tr>
+										<tr>
+										  <td><span class="glyphicon glyphicon-qrcode"></span></td>
+										  <td>2237725844</td>
+										</tr>
+										<tr>
+										  <td><span class="glyphicon glyphicon-envelope"></span></td>
+										  <td>2237725844@qq.com</td>
+										</tr>
+										<tr>
+										  <td><span class="glyphicon glyphicon-phone"></span></td>
+										  <td>15527142086</td>
+										</tr>
+										<tr>
+										  <td><span class="glyphicon glyphicon-home"></span></td>
+										  <td>中国地质大学</td>
+										</tr>
+										<tr>
+										  <td><span class="glyphicon glyphicon-tower"></span></td>
+										  <td>上海德拓</td>
+										</tr>
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="col-sm-9 right">
+			
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				<div class="content col-sm-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<h6><span class="label label-info"><span class="glyphicon glyphicon-thumbs-up"></span>999+</span></h6></div>
+						<div class="col-sm-6"><a href=""><h6 class="lead">博客标题</h6></a></div>
+						<div class="col-sm-2"><h6><span class="label label-primary">9999+</span></h6></div>
+						<div class="col-sm-2"><h6><span class="label label-success">07-28</span></h6></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2"><p>内容截取内容截取内容截取内容截取</p></div>
+						<div class="col-sm-4"><p>王浩：说的很好！</p></div>
+					</div>
+				</div>
+				
+				<div class="page row">
+					<nav>
+					  <ul class="pagination pagination-md">
+					  <li class="disabled"><a href="#">&laquo;</a></li>
+					  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+					  <li class="hidden-xs"><a href="#">2</a></li>
+					  <li class="hidden-xs"><a href="#">3</a></li>
+					  <li class="hidden-xs"><a href="#">4</a></li>
+					  <li class="hidden-xs"><a href="#">5</a></li>
+					  <li><a href="#">&raquo;</a></li>
+					  </ul>
+					</nav>
+				</div>
+		  
+				<div class="foot row">
+					<div class="col-sm-12">
+						<p>author <a href="https://github.com/CugLu">@CugLu</a></p>
+						<p class="pull-right"><a href="#"><span class="glyphicon glyphicon-chevron-up"></span>Back to top</a></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
   	<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
   </body>

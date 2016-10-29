@@ -1,0 +1,39 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #333;
+  text-align: center;
+}
+
+.container{
+	width:80%;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.carousel{
+	margin-bottom: 20px;
+}
+
+.jumbotron{
+	background-color: 495A80;
+	color: white;
+}
+
+.foot{
+	color: white;
+}
+
+.page-header{
+	margin-top: 0px;
+}
+
+.page-header h3{
+	margin: 0px;
+}
+
+.btn{
+	text-shadow: black 5px 3px 3px;
+}

@@ -4,6 +4,60 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+		<!-- 
+	在url后面有中文的话，传到action后会有乱码，这里有几种解决办法
+	1.在web.xml总配置filter，类是tools工具包中的
+	2.什么时候遇到乱码再解决（解码），这种意思跟1一样，但不推荐，每次都要弄，麻烦
+	3.改变tomcat的编码，
+	<Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" URIEncoding="UTF-8"/>
+               我这里用的就是这一种方法，但设置为GBK不行
+	 -->
+	<!-- 
+	<filter>
+    	<filter-name>EncodingFilter</filter-name>
+    	<filter-class>cn.itcast.filter.EncodingFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+    	<filter-name>EncodingFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+ 	</filter-mapping>
+	 -->
+	
+  	<!-- 
+  		关于对页面的访问控制，可用filter来解决，但在设置了interceptor后，
+  		这样举动不那么必要了，即使你能进入页面，有关数据的操作你都无法进行，所以，
+  		没有对页面的访问加以控制！
+  	 -->
+  	 
+	<!-- 配置Spring的核心监听器 -->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	
+	<!-- 配置Struts2的核心过滤器 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+ 		<filter-class>
+ 			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+ 		</filter-class>
+	</filter>
+	<filter-mapping>
+ 		<filter-name>struts2</filter-name>
+ 		<url-pattern>/*</url-pattern>
+ 		<!-- 注意这里的dispatcher，默认为REQUEST，但你要加上其它的话也要把REQUEST加上 -->
+ 		<dispatcher>REQUEST</dispatcher>
+ 		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+	
   <display-name></display-name>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

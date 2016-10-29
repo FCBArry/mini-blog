@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mini.user.domain.User" table="m_user">
+
+		<id name="uid">
+			<generator class="assigned" />
+		</id>
+		<property name="username" />
+		<property name="password" />
+		<property name="email" />
+		<property name="status" />
+		<property name="activationCode" />
+
+		<!-- 对post的一对多 -->
+		<set name="posts" inverse="true" cascade="delete">
+			<key column="uid" />
+			<one-to-many class="mini.post.domain.Post" />
+		</set>
+
+		<!-- 对comment的一对多 -->
+		<set name="comments" inverse="true" cascade="delete">
+			<key column="uid" />
+			<one-to-many class="mini.comment.domain.Comment" />
+		</set>
+
+		<!-- 对favour的一对多 -->
+		<set name="favours" inverse="true" cascade="delete">
+			<key column="uid" />
+			<one-to-many class="mini.favour.domain.Favour" />
+		</set>
+
+		<!-- 对collection的一对多 -->
+		<set name="collections" inverse="true" cascade="delete">
+			<key column="uid" />
+			<one-to-many class="mini.collection.domain.Collection" />
+		</set>
+
+		<!-- 对fans的一对多 -->
+		<!-- attention please! -->
+		<set name="fans" inverse="true">
+			<key column="uid" />
+			<one-to-many class="mini.fans.domain.Fans" />
+		</set>
+
+		<!-- attention please! -->
+		<set name="focus" inverse="true">
+			<key column="uid" />
+			<one-to-many class="mini.fans.domain.Fans" />
+		</set>
+		
+		<!-- 对info的一对多 -->
+		<one-to-one name="info" class="mini.info.domain.Info"
+			cascade="all" property-ref="user" />
+
+	</class>
+</hibernate-mapping>

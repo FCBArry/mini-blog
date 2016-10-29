@@ -11,20 +11,31 @@
 .header{
 	background-image: url(../img/room_header.jpg);
 	text-align: center;
+	padding-top:10px;
 	color: #C0C0C0;
 }
 
 .header img{
-	height: 50px;
+	height: 80px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.header h3{
+	margin-bottom: 0px;
+}
+
+.headerbottom{
+	padding-bottom: 20px;
 }
 
 .content:hover {
-	//margin-bottom: 10px;
 	background: #C0C0C0;
 	cursor: pointer;
 }
 
 .content{
+	border-bottom:1px solid black;
 	background-color: #ebebeb;
 }
 
@@ -33,21 +44,21 @@
 }
 
 .nav-tabs{
-	width: 180px;
-	margin:0 auto;
+	//width: 180px;
+	//margin:0 auto;
 }
 
 .mynav{
-	text-align: center;
+	//text-align: center;
 }
 
 .foot{
-	color: #C0C0C0;
+	color: black;
 	text-align: center;
 }
 
 .foot a{
-	color: #C0C0C0;
+	color: black;
 }
 
 .nav-tabs li{
@@ -60,4 +71,14 @@
 
 .nav-tabs:hover a{
 	color: #333;
+}
+
+.left{
+	//padding-left: 0px;
+	//padding-right: 0px;
+}
+
+.right{
+	//padding-left: 0px;
+	//padding-right: 0px;
 }

@@ -17,7 +17,6 @@
 	margin: 0px;
 }
 
-.post,
 .foot{
 	padding: 0px;
 }
@@ -29,4 +28,15 @@
 
 .foot a{
 	color: black;
+}
+
+#preview{
+	width:200px;
+	height:200px;
+	border:1px solid white;
+	overflow:hidden;
+}
+
+#imghead {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
 }

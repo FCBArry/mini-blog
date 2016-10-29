@@ -7,17 +7,138 @@
 	<!-- 设置开发模式为false -->
 	<constant name="struts.devMode" value="false" />
 	<constant name="struts.multipart.saveDir" value="/tmp" />
-
 	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
-		name="myRequestParser" class="goods.intercept.background.RequestParseWrapper"
+		name="myRequestParser" class="mini.intercept.back.RequestParseWrapper"
 		scope="default" optional="true" />
 	<constant name="struts.multipart.parser" value="myRequestParser" />
 
-	<package name="/" extends="struts-default" namespace="/">
+	<package name="miniblog" extends="struts-default" namespace="/">
 
-		<!-- 配置首页访问的Action -->
-		<action name="/" class="">
-			<result name="/">/index.jsp</result>
+		<!-- 配置自定义拦截器 -->
+		<interceptors>
+			<interceptor name="foregroundInterceptor"
+				class="mini.intercept.front.ForegroundInterceptor" />
+			<interceptor name="backgroundInterceptor"
+				class="mini.intercept.back.BackgroundInterceptor" />
+		</interceptors>
+
+		<!-- 配置adminuser模块的Action -->
+		<action name="adminuser_*" class="adminAction" method="{1}">
+			<result name="login">/adminjsps/adminlogin.jsp</result>
+			<result name="user">/adminjsps/adminuser.jsp</result>
+
+			<interceptor-ref name="backgroundInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置adminpost模块的Action -->
+		<action name="adminpost_*" class="adminPost" method="{1}">
+			<result name="post">/adminjsps/adminpost.jsp</result>
+			<result name="login">/adminjsps/adminlogin.jsp</result>
+
+			<interceptor-ref name="backgroundInterceptor" />
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+		
+		<!-- 配置admincomment模块的Action -->
+		<action name="admincomment_*" class="adminComment" method="{1}">
+			<result name="comment">/adminjsps/admincomment.jsp</result>
+			<result name="login">/adminjsps/adminlogin.jsp</result>
+
+			<interceptor-ref name="backgroundInterceptor" />
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+		
+		<!-- 配置用户模块的Action -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="regist">/jsps/regist.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+			<result name="index" type="redirectAction">post_findByStatus</result>
+
+			<interceptor-ref name="foregroundInterceptor">
+				<param name="excludeMethods">login,activation,regist</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置帖子模块的Action -->
+		<action name="post_*" class="postAction" method="{1}">
+			<result name="index">/jsps/index.jsp</result>
+			<result name="posting">/jsps/posting.jsp</result>
+			<result name="post">/jsps/post.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+
+			<interceptor-ref name="foregroundInterceptor">
+				<param name="excludeMethods">findByStatus,findByPid,findByTitle,findHot</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置评论模块的Action -->
+		<action name="comment_*" class="commentAction" method="{1}">
+			<result name="index">/jsps/index.jsp</result>
+			<result name="post">/jsps/post.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+
+			<interceptor-ref name="foregroundInterceptor">
+				<param name="excludeMethods">findByPid</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置赞模块的Action -->
+		<action name="favour_*" class="favourAction" method="{1}">
+			<result name="index">/jsps/index.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+
+			<interceptor-ref name="foregroundInterceptor" />
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置收藏模块的Action -->
+		<action name="collection_*" class="collectionAction" method="{1}">
+			<result name="index">/jsps/index.jsp</result>
+			<result name="myroom">/jsps/myroom.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+
+			<interceptor-ref name="foregroundInterceptor" />
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置信息模块的Action -->
+		<action name="info_*" class="infoAction" method="{1}">
+			<result name="index">/jsps/index.jsp</result>
+			<result name="myinfo">/jsps/myinfo.jsp</result>
+			<result name="find">/jsps/find.jsp</result>
+			<result name="myroom">/jsps/myroom.jsp</result>
+			<result name="mycollection">/jsps/mycollection.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+
+			<interceptor-ref name="foregroundInterceptor" />
+			<interceptor-ref name="defaultStack" />
+
+		</action>
+
+		<!-- 配置粉丝模块的Action -->
+		<action name="fans_*" class="fansAction" method="{1}">
+			<result name="index">/jsps/index.jsp</result>
+			<result name="find">/jsps/find.jsp</result>
+			<result name="friend">/jsps/friend.jsp</result>
+			<result name="login">/jsps/login.jsp</result>
+
+			<interceptor-ref name="foregroundInterceptor" />
+			<interceptor-ref name="defaultStack" />
+
 		</action>
 
 	</package>

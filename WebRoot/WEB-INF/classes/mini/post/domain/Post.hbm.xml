@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mini.post.domain.Post" table="m_post">
+		
+		<id name="pid">
+			<generator class="assigned"/>
+		</id>
+		<property name="ptitle"/>
+		<property name="pimg"/>
+		<property name="pcontent"/>
+		<property name="pzan"/>
+		<property name="pcomment"/>
+		<property name="pstatus"/>
+		<property name="ptime"/>
+		
+		<many-to-one name="user" lazy="false" class="mini.user.domain.User" column="uid"/>
+		
+		<!-- 对comment的一对多 -->
+  		<set name="comments" inverse="true" cascade="delete">
+			<key column="pid"/>
+			<one-to-many class="mini.comment.domain.Comment"/>
+		</set>
+		
+		<!-- 对favour的一对多 -->
+  		<set name="favours" inverse="true" cascade="delete">
+			<key column="pid"/>
+			<one-to-many class="mini.favour.domain.Favour"/>
+		</set>
+		
+		<!-- 对collection的一对多 -->
+  		<set name="collections" inverse="true" cascade="delete">
+			<key column="pid"/>
+			<one-to-many class="mini.collection.domain.Collection"/>
+		</set>
+		
+	</class>
+</hibernate-mapping>

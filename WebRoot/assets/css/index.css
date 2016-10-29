@@ -1,5 +1,5 @@
 body{
-	background-color: #ebebeb;
+	//background-color: #ebebeb;
 }
 
 .header{
@@ -34,9 +34,10 @@ body{
 
 .right-1,
 .right-2,
-.right-3{
+.right-3,
+.right-4{
 	margin-bottom: 30px;
-	background-color: #ffffff;
+	background-color: #ebebeb;
 }
 
 .list-group,
@@ -45,26 +46,31 @@ body{
 }
 
 .left{
-	margin-right: 30px;
+	margin-right: 10px;
 }
 
 .page-header,
 .content{
-	background-color: #ffffff;
+	background-color: #ebebeb;
+}
+
+.search,
+.content{
+	border-bottom: 1px solid #C0C0C0;
 }
 
 .page-header{
 	margin-top: 0;
-	text-align: center;
+	//text-align: center;
 }
 
 .foot{
-	color: #C0C0C0;
+	color: black;
 	text-align: center;
 }
 
 .foot a{
-	color: #C0C0C0;
+	color: black;
 }
 
 .page{

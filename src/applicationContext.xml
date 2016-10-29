@@ -46,7 +46,14 @@
 		<!-- 配置Hibernate的映射文件 -->
 		<property name="mappingResources">
 			<list>
-			
+				<value>mini/user/domain/User.hbm.xml</value>
+				<value>mini/post/domain/Post.hbm.xml</value>
+				<value>mini/comment/domain/Comment.hbm.xml</value>
+				<value>mini/favour/domain/Favour.hbm.xml</value>
+				<value>mini/collection/domain/Collection.hbm.xml</value>
+				<value>mini/info/domain/Info.hbm.xml</value>
+				<value>mini/fans/domain/Fans.hbm.xml</value>
+				<value>mini/admin/user/domain/Admin.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -61,9 +68,36 @@
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
 	<!--======== Action配置 ========-->
+	<bean id="userAction" class="mini.user.action.UserAction" scope="prototype"></bean>
+	<bean id="postAction" class="mini.post.action.PostAction" scope="prototype"></bean>
+	<bean id="commentAction" class="mini.comment.action.CommentAction" scope="prototype"></bean>
+	<bean id="favourAction" class="mini.favour.action.FavourAction" scope="prototype"></bean>
+	<bean id="collectionAction" class="mini.collection.action.CollectionAction" scope="prototype"></bean>
+	<bean id="infoAction" class="mini.info.action.InfoAction" scope="prototype"></bean>
+	<bean id="fansAction" class="mini.fans.action.FansAction" scope="prototype"></bean>
+	
+	<bean id="adminAction" class="mini.admin.user.action.AdminAction" scope="prototype"></bean>
+	<bean id="adminPost" class="mini.admin.post.AdminPost" scope="prototype"></bean>
+	<bean id="adminComment" class="mini.admin.comment.AdminComment" scope="prototype"></bean>
 	
 	<!--======== Service配置 ========-->
+	<bean id="userService" class="mini.user.service.UserService"></bean>
+	<bean id="postService" class="mini.post.service.PostService"></bean>
+	<bean id="commentService" class="mini.comment.service.CommentService"></bean>
+	<bean id="favourService" class="mini.favour.service.FavourService"></bean>
+	<bean id="collectionService" class="mini.collection.service.CollectionService"></bean>
+	<bean id="infoService" class="mini.info.service.InfoService"></bean>
+	<bean id="fansService" class="mini.fans.service.FansService"></bean>
+	<bean id="adminService" class="mini.admin.user.service.AdminService"></bean>
 	
 	<!--======== Dao配置 ========-->
+	<bean id="userDao" class="mini.user.dao.UserDao"></bean>
+	<bean id="postDao" class="mini.post.dao.PostDao"></bean>
+	<bean id="commentDao" class="mini.comment.dao.CommentDao"></bean>
+	<bean id="favourDao" class="mini.favour.dao.FavourDao"></bean>
+	<bean id="collectionDao" class="mini.collection.dao.CollectionDao"></bean>
+	<bean id="infoDao" class="mini.info.dao.InfoDao"></bean>
+	<bean id="fansDao" class="mini.fans.dao.FansDao"></bean>
+	<bean id="adminDao" class="mini.admin.user.dao.AdminDao"></bean>
 	
 </beans>

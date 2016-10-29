@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mini.comment.domain.Comment" table="m_comment">
+		
+		<id name="cid">
+			<generator class="assigned"/>
+		</id>
+		<property name="ccontent"/>
+		<property name="ctime"/>
+		
+		<many-to-one name="post" lazy="false" class="mini.post.domain.Post" column="pid"/>
+		
+		<many-to-one name="user" lazy="false" class="mini.user.domain.User" column="uid"/>
+	</class>
+</hibernate-mapping>
